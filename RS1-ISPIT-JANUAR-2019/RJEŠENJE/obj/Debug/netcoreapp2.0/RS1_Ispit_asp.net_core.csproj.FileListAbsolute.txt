@@ -1,0 +1,15 @@
+C:\Users\Kenan\Desktop\RS1-ISPIT-JANUAR-2019\RJEŠENJE\bin\Debug\netcoreapp2.0\appsettings.Development.json
+C:\Users\Kenan\Desktop\RS1-ISPIT-JANUAR-2019\RJEŠENJE\bin\Debug\netcoreapp2.0\appsettings.json
+C:\Users\Kenan\Desktop\RS1-ISPIT-JANUAR-2019\RJEŠENJE\bin\Debug\netcoreapp2.0\bundleconfig.json
+C:\Users\Kenan\Desktop\RS1-ISPIT-JANUAR-2019\RJEŠENJE\bin\Debug\netcoreapp2.0\Properties\launchSettings.json
+C:\Users\Kenan\Desktop\RS1-ISPIT-JANUAR-2019\RJEŠENJE\bin\Debug\netcoreapp2.0\RS1_Ispit_asp.net_core.deps.json
+C:\Users\Kenan\Desktop\RS1-ISPIT-JANUAR-2019\RJEŠENJE\bin\Debug\netcoreapp2.0\RS1_Ispit_asp.net_core.runtimeconfig.json
+C:\Users\Kenan\Desktop\RS1-ISPIT-JANUAR-2019\RJEŠENJE\bin\Debug\netcoreapp2.0\RS1_Ispit_asp.net_core.runtimeconfig.dev.json
+C:\Users\Kenan\Desktop\RS1-ISPIT-JANUAR-2019\RJEŠENJE\bin\Debug\netcoreapp2.0\RS1_Ispit_asp.net_core.dll
+C:\Users\Kenan\Desktop\RS1-ISPIT-JANUAR-2019\RJEŠENJE\bin\Debug\netcoreapp2.0\RS1_Ispit_asp.net_core.pdb
+C:\Users\Kenan\Desktop\RS1-ISPIT-JANUAR-2019\RJEŠENJE\obj\Debug\netcoreapp2.0\RS1_Ispit_asp.net_core.csproj.CoreCompileInputs.cache
+C:\Users\Kenan\Desktop\RS1-ISPIT-JANUAR-2019\RJEŠENJE\obj\Debug\netcoreapp2.0\RS1_Ispit_asp.net_core.AssemblyInfoInputs.cache
+C:\Users\Kenan\Desktop\RS1-ISPIT-JANUAR-2019\RJEŠENJE\obj\Debug\netcoreapp2.0\RS1_Ispit_asp.net_core.AssemblyInfo.cs
+C:\Users\Kenan\Desktop\RS1-ISPIT-JANUAR-2019\RJEŠENJE\obj\Debug\netcoreapp2.0\RS1_Ispit_asp.net_core.dll
+C:\Users\Kenan\Desktop\RS1-ISPIT-JANUAR-2019\RJEŠENJE\obj\Debug\netcoreapp2.0\RS1_Ispit_asp.net_core.pdb
+C:\Users\Kenan\Desktop\RS1-ISPIT-JANUAR-2019\RJEŠENJE\obj\Debug\netcoreapp2.0\RS1_Ispit_asp.net_core.genruntimeconfig.cache
