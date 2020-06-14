@@ -1,0 +1,38 @@
+﻿
+@{
+    ViewData["Title"] = "Korak2";
+}
+@model Korak2
+<h2>Korak2</h2>
+
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th scope="col">Datum održanog časa</th>
+            <th scope="col">Škola</th>
+            <th scope="col">Školska godina / Odjeljenje</th>
+            <th scope="col">Predmet</th>
+            <th scope="col">Odsutni učenici**</th>
+            <th scope="col">Akcija</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var i in Model.Red)
+        {
+            <tr>
+                <td>@i.Datum</td>
+                <td>@i.Skola</td>
+                <td>@i.SkolskaGodinaOdjeljenje</td>
+                <td>@i.Predmet</td>
+                <td>@foreach (var x in i.Odsutni)                {
+                    <span>@x, </span>
+                }
+                </td>
+                <td>
+                    <a asp-action="Korak4" asp-route-Id="@i.OdrzaniCasId " class="btn btn-primary">Detalji</a> | <a asp-action="Obrisi" class="btn btn-danger">Obrisi</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<a asp-action="Korak3" asp-route-Id="@Model.NastavnikId" class="btn btn-success">Dodaj</a>

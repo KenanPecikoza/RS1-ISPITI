@@ -1,0 +1,45 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model Korak4PrikaziUcenike
+    
+<style>
+td{ 
+    text-align:center;
+ }
+</style>
+
+<table class="table table-bordered table-hover">
+    <tr>
+        <td>Ucenik</td>
+        <td>Bodovi</td>
+        <td>Prisutan</td>
+        <td>Opradvano odsutan</td>
+        <td>Akcija</td>
+    </tr>
+    @foreach (var i in Model.rows)
+    {
+        <tr>
+            <td>@i.ImeIPrezime</td>
+            <td>
+                <form  ajax-poziv="da" ajax-rezultat="ajaxDiv" action="/OdrzanaNastava/UrediBodove">
+                        <input type="hidden" name="DetaljiId" value="@i.DetaljID"/>
+                        <input  style="text-align:center;" name="Ocjena" value="@i.Ocjena" min="0" max="5"/>
+                        <input type="submit" style="visibility:hidden;"/>
+                </form>
+            </td>
+            <td>
+                <a style="text-align: center;" href="/OdrzanaNastava/Promjena/@i.DetaljID" ajax-poziv="da" ajax-rezultat="ajaxDiv" class="@(i.Prisutan?  "btn btn-success": "btn btn-danger")">@(i.Prisutan? "Prisutan" : "Odsutan")</a>
+            </td>
+            <td>
+                @if (!i.Prisutan)
+                {
+                    <a  href="/OdrzanaNastava/PromjenaOpravdano/@i.DetaljID" ajax-poziv="da" ajax-rezultat="ajaxDiv">@(i.Opravdano??false ? "Da" : "Ne")</a>
+                }
+            </td>
+            <td><a href="/OdrzanaNastava/Korak4Uredi/@i.DetaljID" ajax-poziv="da" ajax-rezultat="ajaxDiv" class="btn btn-primary">Uredi</a></td>
+        </tr>
+    }
+</table>
+
+

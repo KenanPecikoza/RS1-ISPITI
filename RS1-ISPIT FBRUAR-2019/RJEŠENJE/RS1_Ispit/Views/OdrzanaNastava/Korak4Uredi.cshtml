@@ -1,0 +1,39 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model Korak4Uredi
+
+@if (Model.PrisutanNaCasu)
+{
+    <form  action="/OdrzanaNastava/SnimiKorak4" ajax-poziv="da" ajax-rezultat="ajaxDiv"  method="post">
+        <div class="form-group">
+            <label class="col-sm-2 col-form-label">Ucenik</label>
+            <input readonly asp-for="@Model.Ucenik" class="form-control">
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 col-form-label">Ocjena</label>
+            <input asp-for="@Model.UcenikPrisutan.Ocjena" class="form-control" min="1" max="5">
+        </div>
+        <input type="hidden" asp-for="@Model.OdrzaniCasId" />
+        <input type="hidden" asp-for="@Model.DetaljiID" />
+        <input  type="submit" class="btn btn-default" value="Snimi" />
+    </form>
+}
+else
+{
+<form action="/OdrzanaNastava/SnimiKorak4" ajax-poziv="da" ajax-rezultat="ajaxDiv" method="post">
+    <div class="form-group">
+        <label class="col-sm-2 col-form-label">Ucenik</label>
+        <input readonly asp-for="@Model.Ucenik" class="form-control" type="text">
+    </div>
+    <div class="form-group">
+        <label for="exampleFormControlTextarea1">Napomena</label>
+        <textarea asp-for="@Model.UcenikOdsutan.Napomena" class="form-control" id="exampleFormControlTextarea1" rows="2"></textarea>
+    </div>
+    <label>Opravdano</label>
+    <input asp-for="@Model.UcenikOdsutan.Opravdano" />
+    <input type="hidden" asp-for="@Model.OdrzaniCasId" />
+    <input type="hidden" asp-for="@Model.DetaljiID" />
+    <input type="submit" class="btn btn-default" value="Snimi" />
+</form>
+}

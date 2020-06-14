@@ -1,0 +1,25 @@
+﻿@{
+    ViewData["Title"] = "Korak1";
+}
+@model IEnumerable<Korak1>
+<h2>Korak1</h2>
+
+<table class="table table-bordered table-hover">
+    <thead >
+        <tr>
+            <th scope="col">Ime i prezime nastavnika</th>
+            <th scope="col">Broj održanih časova u akutalnoj kalendarskoj godini</th>
+            <th scope="col">Akcija</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var i in Model)
+        {
+            <tr>
+                <td>@i.ImeIPrezime</td>
+                <td>@i.BrojCasova</td>
+                <td><a asp-action="Korak2" asp-route-Id="@i.NastavnikId" class="btn btn-primary">Odaberi</a></td>
+            </tr>
+        }
+    </tbody>
+</table>

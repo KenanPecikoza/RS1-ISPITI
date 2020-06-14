@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewData["Title"] = "Korak3";
+}
+<h2>Korak3</h2>
+@model Korak3
+<form action="/OdrzanaNastava/SnimiKorak3" method="post">
+    <div class="form-group">
+        <label  class="col-sm-2 col-form-label">Nastavnik</label>
+        <input readonly asp-for="NastavnikImeIPrezime" class="form-control" type="text" >
+    </div>
+    <div class="form-group">
+        <label  class="col-sm-2 col-form-label">Datum</label>
+        <input asp-for="Datum" class="form-control" type="date">
+    </div>
+    <div class="form-group">
+        <label for="exampleFormControlSelect1">Example select</label>
+        <select asp-for="PredajePredmetId" asp-items="@Model.SkolaOdjeljenjePredmet" class="form-control" ></select>
+    </div>
+
+    <div class="form-group">
+        <label for="exampleFormControlTextarea1">Sadržaj časa</label>
+        <textarea asp-for="@Model.SadrzajCasa" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+    </div>
+    <input type="hidden" asp-for="NastavnikId"   />
+    <input type="submit" class="btn btn-default" value="Snimi" />
+</form>
