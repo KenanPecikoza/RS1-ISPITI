@@ -1,0 +1,43 @@
+﻿
+@{
+    ViewData["Title"] = "Korak2";
+}
+
+<h2>Korak2</h2>
+
+@model Korak2
+
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <td>Skola domaćin : @Model.SkolaDomacin</td>
+        </tr>
+        <tr>
+            <td>Razred : @Model.Razred</td>
+        </tr>
+        <tr>
+            <th scope="col">TakmicenjeID</th>
+            <th scope="col">Predmet</th>
+            <th scope="col">Razred</th>
+            <th scope="col">Datum</th>
+            <th scope="col">Broj broj ucesnika koji nisu pristupili</th>
+            <th scope="col">Najbolji učesnik </th>
+            <th scope="col">Akcija</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var i in Model.takmicenja)
+        {
+            <tr>
+                <td>@i.TakmicenjeID</td>
+                <td>@i.Predmet</td>
+                <td>@i.Razred</td>
+                <td>@i.Datum</td>
+                <td>@i.BrojUcenikaKojiNisuPrisupili</td>
+                <td>@i.NajboljiUcesnik</td>
+                <td><a asp-action="Korak4" asp-route-Id="@i.TakmicenjeID" class="btn btn-primary">Rezultati</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
+<a asp-action="Korak3" class="btn btn-default" asp-route-Id="@Model.SkolaDomacinId">Dodaj</a>

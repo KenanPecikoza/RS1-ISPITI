@@ -1,0 +1,36 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model Korak4PrikaziUcesnike
+
+<table class="table table-bordered table-hover">
+    <thead>
+
+        <tr>
+            <th scope="col">Odjeljenje</th>
+            <th scope="col">Broj u dnevniku</th>
+            <th scope="col">Pristupio</th>
+            <th scope="col">Rezultati bodovi</th>
+            <th scope="col">Akcija</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var i in Model.Ucesnici)
+        {
+        <tr>
+            <td>@i.Odjeljenje</td>
+            <td>@i.BrojUDnevniku</td>
+            <td><a href="/Takmicenje/Promjena/@i.UcesnikId" ajax-poziv="da" ajax-rezultat="ajaxDiv" class="@(i.Pristupio? "btn btn-success": "btn btn-danger")">@(i.Pristupio? "Da": "Ne")</a></td>
+            @*<td>@((i.Bodovi==0)? "x": i.Bodovi.ToString())</td>*@
+            <td><form action="/Takmicenje/Korak4UrediSnimi" ajax-poziv="da" ajax-rezultat="ajaxDiv" method="post">
+                    <input  name="Bodovi" value="@i.Bodovi" max="100" />
+                    <input hidden  name="UcesnikId" value="@i.UcesnikId"/>
+                    <input type="submit" hidden  />
+                </form></td>
+            <td><a href="/Takmicenje/Korak4Uredi/@i.UcesnikId" ajax-poziv="da" ajax-rezultat="ajaxDiv" class="btn btn-primary">Uredi</a></td>
+        </tr>
+        }
+    </tbody>
+</table>
+<a href="/Takmicenje/Korak4DodajUcesnika/@Model.TakmicenjeId" ajax-poziv="da" ajax-rezultat="ajaxDiv" class="btn btn-success" >Dodaj ucesnika na ovo takmicenje</a>

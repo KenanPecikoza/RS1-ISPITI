@@ -1,0 +1,35 @@
+﻿
+@{
+    ViewData["Title"] = "Korak4";
+}
+
+<h2>Korak4</h2>
+@model Korak4
+
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th scope="col">SkolaDomaćin: @Model.SkolaDomacin</th>
+        </tr>
+        <tr>
+            <th scope="col">Predmet: @Model.Predmet</th>
+        </tr>
+        <tr>
+            <th scope="col">Razred: @Model.Razred</th>
+        </tr>
+        <tr>
+            <th scope="col">Datum: @Model.Datum</th>
+        </tr>
+    </thead>
+</table>
+<a asp-action="Zakljucaj" class="btn btn-danger" asp-route-Id="@Model.TakmicenjeId">Zaključaj</a>
+
+<div id="ajaxDiv">
+
+</div>
+<a asp-action="Korak3" class="btn btn-danger" asp-route-Id="@Model.SkolaDomacinId">Dodaj takmicenje</a>
+<script>
+    $.get("/Takmicenje/Korak4PrikaziUcesnike/@Model.TakmicenjeId", function (data) {
+        $("#ajaxDiv").html(data);
+    });
+</script>

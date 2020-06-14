@@ -1,0 +1,17 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model Korak4DodajUcesnika
+
+    <form action="/Takmicenje/Korak4DodajUcesnikaSnimi" ajax-poziv="da" ajax-rezultat="ajaxDiv" method="post" class="table table-bordered">
+        <div class="form-group">
+            <label for="exampleFormControlSelect1">Predmet</label>
+            <select asp-for="@Model.OdjeljenjeStavkaId" asp-items="@Model.OdjeljenjeStavka" class="form-control"></select>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 col-form-label">Bodovi</label>
+            <input asp-for="@Model.Bodovi" class="form-control">
+        </div>
+        <input type="hidden"  asp-for="@Model.TakmicenjeId" />
+        <input type="submit" class="btn btn-default" value="Snimi" />
+    </form>

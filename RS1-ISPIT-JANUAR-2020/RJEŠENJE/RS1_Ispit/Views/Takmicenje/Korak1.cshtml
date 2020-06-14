@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewData["Title"] = "Korak1";
+}
+
+<h2>Korak1</h2>
+
+@model Korak1
+<form action="/Takmicenje/Korak2" method="post">
+
+    <div class="form-group">
+        <label for="exampleFormControlSelect1">Skola</label>
+        <select asp-for="@Model.SkolaID" asp-items="@Model.Skole" class="form-control"></select>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 col-form-label">Razred</label>
+        <input asp-for="@Model.Razred" class="form-control" >
+    </div>
+
+    <input type="submit" class="btn btn-default" value="Odaberi" />
+</form>
