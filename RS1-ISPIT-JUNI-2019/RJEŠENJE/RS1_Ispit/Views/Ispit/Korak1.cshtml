@@ -1,0 +1,36 @@
+﻿
+@{
+    ViewData["Title"] = "Korak1";
+}
+
+<h2>Korak1</h2>
+@model IEnumerable<Korak1>
+
+<table class="table table-bordered" >
+    <tr>
+        <td>Naziv predmeta</td>
+        <td>Akademska godina</td>
+        <td>Ime i prezime nastavnika</td>
+        <td>Broj održanih časova</td>
+        <td>Broj studenata na predmetu</td>
+        <td>Akcija</td>
+    </tr>
+    @foreach (var i in Model)
+    {
+        @foreach (var x in i.Rows)
+        {
+            <tr>
+                @if (x.AngazovanId==i.Rows.First().AngazovanId)
+                {
+                     <th style="text-align:center" rowspan="@i.Rows.Count()">@i.NazivPredmeta</th>
+                }
+                <td>@x.AkademskaGodina</td>
+                <td>@x.ImeIPrezimeNastavnika</td>
+                <td>@x.BrojOdrzanihCasova</td>
+                <td>@x.BrojStudenataNaPredmetu</td>
+                <td><a class="btn btn-default" asp-action="Korak2" asp-route-Id="@x.AngazovanId">Odaberi</a></td>
+            </tr>     
+          }
+    }
+
+</table>

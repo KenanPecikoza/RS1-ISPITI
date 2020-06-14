@@ -1,0 +1,38 @@
+﻿
+@{
+    ViewData["Title"] = "Korak4";
+}
+
+<h2>Korak4</h2>
+@model Korak3
+<form action="/Ispit/Korak3Snimi" class="table table-bordered " method="post">
+    <div class="form-group">
+        <label>Predmet</label>
+        <input readonly asp-for="@Model.Predmet" />
+    </div>
+    <div class="form-group">
+        <label>Nastavnik</label>
+        <input readonly asp-for="@Model.Nastavnik" />
+    </div>
+    <div class="form-group">
+        <label>Skolska godina</label>
+        <input readonly asp-for="@Model.Godina" />
+    </div>
+    <div class="form-group">
+        <label>Datum</label>
+        <input readonly asp-for="@Model.Datum" />
+    </div>
+    <div class="form-group">
+        <label>Napomena</label>
+        <input readonly asp-for="@Model.Napomena" />
+    </div>
+    <input type="hidden" asp-for="@Model.AngazovanId" />
+</form>
+
+<div id="ajaxDiv"></div>
+
+<script>
+    $.get("/Ispit/Korak4PrikaziStudente/@Model.AngazovanId", function (data) {
+        $("#ajaxDiv").html(data);
+    });
+</script>

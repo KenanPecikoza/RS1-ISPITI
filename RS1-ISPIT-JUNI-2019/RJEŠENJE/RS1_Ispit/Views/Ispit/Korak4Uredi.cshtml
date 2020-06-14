@@ -1,0 +1,18 @@
+﻿
+@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model Korak4Uredi
+
+<form action="/Ispit/Korak4UrediSnimi" ajax-poziv="da" ajax-rezultat="ajaxDiv" class="table table-bordered " method="post">
+    <div class="form-group">
+        <label>Student</label>
+        <input readonly asp-for="@Model.Student" />
+    </div>
+    <div class="form-group">
+        <label>Ocjena</label>
+        <input  asp-for="@Model.Ocjena" />
+    </div>
+    <input type="hidden" asp-for="@Model.IspitStudentId" />
+    <input type="submit" value="Snimi" />
+</form>
