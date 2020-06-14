@@ -1,0 +1,49 @@
+﻿
+@{
+    ViewData["Title"] = "Korak4";
+}
+
+<h2>Korak4</h2>
+@model Korak3
+<form action="/PopravniIspit/Korak3Snimi" class="table-bordered" method="post">
+    <div class="form-group">
+        <label>1. Clan Komisije</label>
+        <select disabled asp-for="@Model.ClanKomisije1Id" asp-items="@Model.ClanoviKomisije"></select>
+    </div>
+    <div class="form-group">
+        <label>2. Clan Komisije</label>
+        <select disabled  asp-for="@Model.ClanKomisije2Id" asp-items="@Model.ClanoviKomisije"></select>
+    </div>
+    <div class="form-group">
+        <label>3. Clan Komisije</label>
+        <select disabled asp-for="@Model.ClanKomisije3Id" asp-items="@Model.ClanoviKomisije"></select>
+    </div>
+    <div class="form-group">
+        <label>Datum: </label>
+        <input readonly asp-for="@Model.Datum" />
+    </div>
+    <div class="form-group">
+        <label>Škola</label>
+        <input readonly asp-for="@Model.Skola" />
+    </div>
+    <div class="form-group">
+        <label>Školska godina</label>
+        <input readonly asp-for="@Model.SkolskaGodina" />
+    </div>
+    <div class="form-group">
+        <label>Predmet</label>
+        <input readonly asp-for="@Model.Predmet" />
+    </div>
+    <input type="hidden" asp-for="@Model.SkolskaGodinaId" />
+    <input type="hidden" asp-for="@Model.SkolaId" />
+    <input type="hidden" asp-for="@Model.PremdetId" />
+</form>
+<div id="ajaxDiv"></div>
+
+<a href="/PopravniIspit/Korak3?SkolaId=@Model.SkolaId&PredmetId=@Model.PremdetId&SkolskaGodinaId=@Model.SkolskaGodinaId" class="btn btn-default">Dodaj</a>
+
+<script>
+    $.get("/PopravniIspit/Korak4PrikaziUcenike/@Model.PopravniIspitId", function (data) {
+        $("#ajaxDiv").html(data);
+    })
+</script>

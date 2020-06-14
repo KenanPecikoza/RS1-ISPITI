@@ -1,0 +1,42 @@
+﻿
+@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model IEnumerable<Korak4PrikaziUcenike>
+    <table class="table table-bordered">
+        <tr>
+            <td>Učenik</td>
+            <td>Odjeljenje</td>
+            <td>Broj u dnevniku</td>
+            <td>Prisutan</td>
+            <td>Bodovi</td>
+            <td>Akcija</td>
+        </tr>
+        @foreach (var i in Model)
+        {
+            <tr>
+                <td>@i.Ucenik</td>
+                <td>@i.Odjeljenje</td>
+                <td>@i.BrojUDnevniku</td>
+                <td>
+                    @if (i.Izlazak)
+                    {
+                        <a href="/PopravniIspit/Promjena/@i.PopravniIspitStavkaId" ajax-poziv="da" ajax-rezultat="ajaxDiv" class="@(i.Prisutan? "btn btn-success":"btn btn-danger")">
+                        @(i.Prisutan? "Da":"Ne")</a>
+                    }
+                    else
+                    {
+                          <a style="color:red">Nema pravo na popravni</a>
+                    }
+                </td>
+                <td>@i.Bodovi</td>
+                <td>
+                    @if (i.Izlazak)
+                    {
+                        <a href="/PopravniIspit/Korak4Uredi/@i.PopravniIspitStavkaId" ajax-poziv="da" ajax-rezultat="ajaxDiv" class="btn btn-default">Uredi</a>
+                    }
+                </td>
+            </tr>
+
+        }
+    </table>

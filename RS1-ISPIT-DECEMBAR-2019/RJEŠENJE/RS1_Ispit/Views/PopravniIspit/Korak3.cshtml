@@ -1,0 +1,42 @@
+﻿
+@{
+    ViewData["Title"] = "Korak3";
+}
+
+<h2>Korak3</h2>
+@model Korak3
+<form action="/PopravniIspit/Korak3Snimi" class="table-bordered" method="post">
+    <div class="form-group">
+        <label>1. Clan Komisije</label>
+        <select asp-for="@Model.ClanKomisije1Id" asp-items="@Model.ClanoviKomisije"></select>
+    </div>
+    <div class="form-group">
+        <label>2. Clan Komisije</label>
+        <select asp-for="@Model.ClanKomisije2Id" asp-items="@Model.ClanoviKomisije"></select>
+    </div>
+    <div class="form-group">
+        <label>3. Clan Komisije</label>
+        <select asp-for="@Model.ClanKomisije3Id" asp-items="@Model.ClanoviKomisije"></select>
+    </div>
+    <div class="form-group">
+        <label>Datum: </label>
+        <input asp-for="@Model.Datum" />
+    </div>
+    <div class="form-group">
+        <label>Škola</label>
+        <input asp-for="@Model.Skola" />
+    </div>
+    <div class="form-group">
+        <label>Školska godina</label>
+        <input asp-for="@Model.SkolskaGodina" />
+    </div>
+    <div class="form-group">
+        <label>Predmet</label>
+        <input asp-for="@Model.Predmet" />
+    </div>
+    <input type="hidden" asp-for="@Model.SkolskaGodinaId" />
+    <input type="hidden" asp-for="@Model.SkolaId" />
+    <input type="hidden" asp-for="@Model.PremdetId" />
+    <input type="submit" value="Snimi" />
+</form>
+
