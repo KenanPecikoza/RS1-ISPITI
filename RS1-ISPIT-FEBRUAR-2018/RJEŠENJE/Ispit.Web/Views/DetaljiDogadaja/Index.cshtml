@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+@model Korak2 
+<table class="table-bordered">
+    <tr>
+        <td>Datum događaja</td>
+        <td>@Model.DatumDogadjaja</td>
+    </tr>
+    <tr>
+        <td>Datum dodavanja</td>
+        <td>@Model.DatumDogadjaja</td>
+    </tr>
+    <tr>
+        <td>Opis događaja</td>
+        <td>@Model.Opis</td>
+    </tr>
+    <tr>
+        <td>Nastavnik</td>
+        <td>@Model.Nastavnik</td>
+    </tr>
+</table>
+
+<div id="ajaxDiv"></div>
+
+<script>
+    $.get("/DetaljiDogadaja/PrikaziObaveze/@Model.DogadjajId", function (data) {
+        $("#ajaxDiv").html(data);
+    })
+</script>

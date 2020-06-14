@@ -1,0 +1,28 @@
+﻿
+@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model IEnumerable<Korak3>
+    <table class="table table-bordered glyphicon-align-center">
+        <tr>
+            <td>Naziv</td>
+            <td>Procenat realizacije obaveze</td>
+            <td>Salji notifikaciju x dana unaprijed</td>
+            <td>Ponavljaj notifikaciju svaki dan do početka događaja</td>
+            <td>Akcija</td>
+        </tr>
+        @foreach (var i in Model)
+        {
+            <tr>
+                <td>@i.Naziv</td>
+                <td>@i.Procenat</td>
+                <td>@i.DanaUnaprijed</td>
+                <td>
+                @(i.Ponavljaj?"Da":"Ne")
+                </td>
+                <td>
+                    <a href="/DetaljiDogadaja/UrediObavezu/@i.ObavezaId" ajax-poziv="da" ajax-rezultat="ajaxDiv" >Uredi</a>
+                </td>
+            </tr>
+        }
+    </table>

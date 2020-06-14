@@ -1,0 +1,66 @@
+﻿@{
+    ViewData["Title"] = "Index";
+}
+@model Korak1
+
+<div class="alert alert-warning" role="alert">
+    <strong>Događaj "ISPIT RS1" - 13.02.2018.</strong> <br />
+    Ovo je podsjetnik za obavezu "Pregledati pdf materijale". Označi kao <a href="" class="">pročitanu.</a>
+</div>
+
+<h2>Neoznačeni događaji</h2>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Datum</th>
+            <th>Nastavnik</th>
+            <th>Opis</th>
+            <th>Broj obaveza</th>
+            <th>Akcija</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var i in Model.NeoznaceniDogadjaji)
+        {
+            <tr>
+                <th>@i.Datum</th>
+                <th>@i.NastavnikImeIPrezime</th>
+                <th>@i.OpisDogadjaja</th>
+                <th>@i.Obaveza</th>
+                <th>
+                    <a asp-action="Dodaj" asp-route-Id="@i.DogadjajId" class="btn btn-default">Dodaj</a>
+                </th>
+            </tr>
+        }
+
+    </tbody>
+</table>
+<br />
+<hr />
+<br />
+
+<h2>Označeni događaji</h2>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Datum</th>
+            <th>Nastavnik</th>
+            <th>Opis</th>
+            <th>Relizovano obaveza RO</th>
+            <th>Akcija</th>
+</thead>
+    <tbody>
+        @foreach (var i in Model.OznaceniDogadjaji)
+        {
+            <tr>
+                <th>@i.Datum</th>
+                <th>@i.NastavnikImeIPrezime</th>
+                <th>@i.OpisDogadjaja</th>
+                <th>@i.Realizovano</th>
+                <th>
+                    <a asp-action="Index" asp-controller="DetaljiDogadaja" asp-route-Id="@i.DogadjajId" class="btn btn-default">Detalji</a>
+                </th>
+            </tr>
+        }
+    </tbody>
+</table>
