@@ -1,0 +1,22 @@
+﻿
+@{
+    ViewData["Title"] = "Korak1";
+}
+
+<h2>Korak1</h2>
+
+<table class="table table-bordered">
+    <tr>
+        <td>Škola </td>
+        <td>Ime i prezime nastavnika </td>
+        <td>Akcija </td>
+    </tr>
+    @foreach (var i in Model)
+    {
+        <tr>
+            <td>@i.Skola</td>
+            <td>@i.ImeIPrezimeNastavnika</td>
+            <td><a asp-action="Korak2" asp-route-Id="@i.NastavnikId">Odaberi</a></td>
+        </tr>
+    }
+</table>
