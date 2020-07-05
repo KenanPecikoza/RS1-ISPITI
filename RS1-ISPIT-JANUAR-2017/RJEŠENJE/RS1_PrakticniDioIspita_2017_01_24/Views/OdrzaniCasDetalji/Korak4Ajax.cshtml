@@ -1,0 +1,41 @@
+﻿
+@{
+    ViewData["Title"] = "Korak4Ajax";
+}
+
+<h2>Korak4Ajax</h2>
+@model IEnumerable<Korak4>
+<table class="table table-bordered text-center">
+    <tr>
+        <td>Ucenik</td>
+        <td>Ocjena</td>
+        <td>Prisutan</td>
+        <td>Opravdano odsutan</td>
+        <td>Akcija</td>
+    </tr>
+    @foreach (var i in Model)
+    {
+        <tr>
+            <td>@i.Ucenik </td>
+            <td>
+                @if (i.Ocjena>0)
+                {
+                    @i.Ocjena   
+
+                }
+            </td>
+            <td>
+              <a href="/OdrzaniCasDetalji/Promjena/@i.Id" ajax-poziv="da" ajax-rezultat="ajaxDiv" class="@(i.Odsutan? "btn btn-danger":"btn btn-success")"> @(i.Odsutan? "Odsutan" : "Prisutan")</a>
+            </td>
+            <td >
+                @if (i.Odsutan)
+                {
+                        @(i.Opravdano? "Da" : "Ne")
+                }
+            </td>
+            <td>
+                <a href="/OdrzaniCasDetalji/Korak4Uredi/@i.Id" ajax-poziv="da" ajax-rezultat="ajaxDiv" >Uredi</a>
+            </td>
+        </tr>
+    }
+</table>

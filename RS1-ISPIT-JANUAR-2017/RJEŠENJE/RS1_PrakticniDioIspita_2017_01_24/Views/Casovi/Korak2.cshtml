@@ -1,0 +1,31 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model Korak2Casovi
+
+    <table class="table table-bordered text-center" >
+        <tr>
+            <td>Datum </td>
+            <td>Odjeljenje </td>
+            <td>Predmet </td>
+            <td>Akcija </td>
+        </tr>
+          @foreach (var i in Model.Casovi)
+          {
+              <tr>
+                  <td>@i.datum</td>
+                  <td>@i.Oznaka</td>
+                  <td>@i.Predmet</td>
+                  <td>
+                      <a asp-action="Korak4" asp-controller="OdrzaniCasDetalji" asp-route-Id="@i.Id">Edit</a> |
+                      <a href="/OdrzaniCasDetalji/Detalji/@i.Id" ajax-poziv="da" ajax-rezultat="DetaljiDiv">Detalji</a>
+
+                  </td>
+              </tr>
+          }
+    </table>
+    <a asp-action="Korak3" asp-route-Id="@Model.Id" class="btn btn-primary">Dodaj</a>
+
+
+<div id="DetaljiDiv"></div>
+

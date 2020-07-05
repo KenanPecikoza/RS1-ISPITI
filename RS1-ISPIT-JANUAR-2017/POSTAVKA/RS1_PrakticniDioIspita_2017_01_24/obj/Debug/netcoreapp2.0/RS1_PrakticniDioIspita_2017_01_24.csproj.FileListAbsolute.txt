@@ -1,0 +1,15 @@
+C:\Users\Kenan\Desktop\RS1IspitFahro\Ispit_2017_01_24\Postavka\RS1_PrakticniDioIspita_2017_01_24\bin\Debug\netcoreapp2.0\appsettings.json
+C:\Users\Kenan\Desktop\RS1IspitFahro\Ispit_2017_01_24\Postavka\RS1_PrakticniDioIspita_2017_01_24\bin\Debug\netcoreapp2.0\bundleconfig.json
+C:\Users\Kenan\Desktop\RS1IspitFahro\Ispit_2017_01_24\Postavka\RS1_PrakticniDioIspita_2017_01_24\bin\Debug\netcoreapp2.0\Properties\launchSettings.json
+C:\Users\Kenan\Desktop\RS1IspitFahro\Ispit_2017_01_24\Postavka\RS1_PrakticniDioIspita_2017_01_24\bin\Debug\netcoreapp2.0\RS1_PrakticniDioIspita_2017_01_24.deps.json
+C:\Users\Kenan\Desktop\RS1IspitFahro\Ispit_2017_01_24\Postavka\RS1_PrakticniDioIspita_2017_01_24\bin\Debug\netcoreapp2.0\RS1_PrakticniDioIspita_2017_01_24.runtimeconfig.json
+C:\Users\Kenan\Desktop\RS1IspitFahro\Ispit_2017_01_24\Postavka\RS1_PrakticniDioIspita_2017_01_24\bin\Debug\netcoreapp2.0\RS1_PrakticniDioIspita_2017_01_24.runtimeconfig.dev.json
+C:\Users\Kenan\Desktop\RS1IspitFahro\Ispit_2017_01_24\Postavka\RS1_PrakticniDioIspita_2017_01_24\bin\Debug\netcoreapp2.0\RS1_PrakticniDioIspita_2017_01_24.dll
+C:\Users\Kenan\Desktop\RS1IspitFahro\Ispit_2017_01_24\Postavka\RS1_PrakticniDioIspita_2017_01_24\bin\Debug\netcoreapp2.0\RS1_PrakticniDioIspita_2017_01_24.pdb
+C:\Users\Kenan\Desktop\RS1IspitFahro\Ispit_2017_01_24\Postavka\RS1_PrakticniDioIspita_2017_01_24\obj\Debug\netcoreapp2.0\RS1_PrakticniDioIspita_2017_01_24.csprojAssemblyReference.cache
+C:\Users\Kenan\Desktop\RS1IspitFahro\Ispit_2017_01_24\Postavka\RS1_PrakticniDioIspita_2017_01_24\obj\Debug\netcoreapp2.0\RS1_PrakticniDioIspita_2017_01_24.csproj.CoreCompileInputs.cache
+C:\Users\Kenan\Desktop\RS1IspitFahro\Ispit_2017_01_24\Postavka\RS1_PrakticniDioIspita_2017_01_24\obj\Debug\netcoreapp2.0\RS1_PrakticniDioIspita_2017_01_24.AssemblyInfoInputs.cache
+C:\Users\Kenan\Desktop\RS1IspitFahro\Ispit_2017_01_24\Postavka\RS1_PrakticniDioIspita_2017_01_24\obj\Debug\netcoreapp2.0\RS1_PrakticniDioIspita_2017_01_24.AssemblyInfo.cs
+C:\Users\Kenan\Desktop\RS1IspitFahro\Ispit_2017_01_24\Postavka\RS1_PrakticniDioIspita_2017_01_24\obj\Debug\netcoreapp2.0\RS1_PrakticniDioIspita_2017_01_24.dll
+C:\Users\Kenan\Desktop\RS1IspitFahro\Ispit_2017_01_24\Postavka\RS1_PrakticniDioIspita_2017_01_24\obj\Debug\netcoreapp2.0\RS1_PrakticniDioIspita_2017_01_24.pdb
+C:\Users\Kenan\Desktop\RS1IspitFahro\Ispit_2017_01_24\Postavka\RS1_PrakticniDioIspita_2017_01_24\obj\Debug\netcoreapp2.0\RS1_PrakticniDioIspita_2017_01_24.genruntimeconfig.cache

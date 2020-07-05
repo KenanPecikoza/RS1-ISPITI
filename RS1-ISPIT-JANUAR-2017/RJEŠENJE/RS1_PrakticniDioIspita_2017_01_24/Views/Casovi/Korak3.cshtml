@@ -1,0 +1,18 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model Korak3
+
+    <form action="/Casovi/Korak3Snimi" class="table table-bordered" method="post">
+        <div class="form-group">
+            <label>Nastavnik</label>
+            <input asp-for="Nastavnik" />
+            <label>Datum</label>
+            <input asp-for="Datum" />
+
+            <label>Odjeljenje/Predmet</label>
+            <select asp-for="AngazovanId" asp-items="@Model.OdjeljenjePredmet"></select>
+            <input type="submit" name="name" value="Snimi" />
+        </div>
+
+    </form>

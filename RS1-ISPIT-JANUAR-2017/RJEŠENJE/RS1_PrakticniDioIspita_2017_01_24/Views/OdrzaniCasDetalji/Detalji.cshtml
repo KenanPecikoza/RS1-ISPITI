@@ -1,0 +1,27 @@
+﻿
+@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model  Detalji
+    <table class="table table-bordered text-center">
+        <tr>
+            <td>Datum odrzanog casa  </td>
+            <td>Odjeljenje  </td>
+            <td>Broj prisutnih  </td>
+            <td>Predmet  </td>
+            <td>Najbolji ucenik  </td>
+            <td>Akcija  </td>
+        </tr>
+        <tr>
+            <td>@Model.Datum</td>
+            <td>@Model.Odjeljenje</td>
+            <td>
+                <span>@Model.Prisutno od @Model.Ukupno</span>
+            </td>
+            <td>@Model.Predmet</td>
+            <td>@Model.NajboljiUcenik</td>
+            <td>
+                <a asp-action="Korak4" asp-controller="OdrzaniCasDetalji" asp-route-Id="@Model.Id">Edit</a>
+            </td>
+        </tr>
+    </table>

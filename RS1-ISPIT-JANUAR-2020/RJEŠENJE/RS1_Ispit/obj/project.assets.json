@@ -14768,11 +14768,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Kenan\\Documents\\GitHub\\RS1-ISPIT-JANUAR-2020\\RJEŠENJE\\RS1_Ispit\\RS1_Ispit_asp.net_core.csproj",
+      "projectUniqueName": "C:\\Users\\Kenan\\Documents\\GitHub\\RS1-ISPITI\\RS1-ISPIT-JANUAR-2020\\RJEŠENJE\\RS1_Ispit\\RS1_Ispit_asp.net_core.csproj",
       "projectName": "RS1_Ispit_asp.net_core",
-      "projectPath": "C:\\Users\\Kenan\\Documents\\GitHub\\RS1-ISPIT-JANUAR-2020\\RJEŠENJE\\RS1_Ispit\\RS1_Ispit_asp.net_core.csproj",
+      "projectPath": "C:\\Users\\Kenan\\Documents\\GitHub\\RS1-ISPITI\\RS1-ISPIT-JANUAR-2020\\RJEŠENJE\\RS1_Ispit\\RS1_Ispit_asp.net_core.csproj",
       "packagesPath": "C:\\Users\\Kenan\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Kenan\\Documents\\GitHub\\RS1-ISPIT-JANUAR-2020\\RJEŠENJE\\RS1_Ispit\\obj\\",
+      "outputPath": "C:\\Users\\Kenan\\Documents\\GitHub\\RS1-ISPITI\\RS1-ISPIT-JANUAR-2020\\RJEŠENJE\\RS1_Ispit\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
@@ -14828,7 +14828,7 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
       }
     }
   }

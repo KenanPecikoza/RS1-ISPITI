@@ -1,0 +1,40 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model Korak4
+
+@if (Model.Odsutan)
+{
+    <form action="/OdrzaniCasDetalji/Korak4UrediSnimi" ajax-poziv="da" ajax-rezultat="ajaxDiv" class="table table-bordered" method="post">
+        <div class="form-group">
+            <label>Ucenik</label>
+            <input readonly asp-for="Ucenik" />
+        </div>
+        <div class="form-group">
+
+            <label>Opravdano odsutan</label>
+            <input asp-for="Opravdano" />
+        </div>
+        <input hidden asp-for="Odsutan" />
+        <input hidden asp-for="Id" />
+        <input type="submit" name="name" value="Snimi" />
+    </form>
+}
+else
+{
+<form action="/OdrzaniCasDetalji/Korak4UrediSnimi" ajax-poziv="da" ajax-rezultat="ajaxDiv" class="table table-bordered" method="post">
+    <div class="form-group">
+        <label>Ucenik</label>
+        <input readonly asp-for="Ucenik" />
+    </div>
+    <div class="form-group">
+        <label>Ocjena</label>
+        <input asp-for="Ocjena" />
+    </div>
+    <input hidden asp-for="Odsutan" />
+    <input hidden asp-for="Id" />
+
+
+    <input type="submit" name="name" value="Snimi" />
+</form>
+}

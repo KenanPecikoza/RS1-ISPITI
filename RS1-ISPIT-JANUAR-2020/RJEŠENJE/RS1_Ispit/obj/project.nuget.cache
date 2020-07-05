@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "UUKJEcD6dI5zyZTDSb+U7KzXN86fRy4t81Jfr6GjfQ+hUi89KL8ll4uODIVDLwk0XA0n8k8vH+rszcOK7B299Q==",
+  "dgSpecHash": "Kb3RO+x1BE43H5KwV6khJPYhVTF/EETUZhDGstNQrU0QLcd9YyAiLb8N6z7umRyXODUK1r8knm7tqGt8NX0JHQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Kenan\\Documents\\GitHub\\RS1-ISPIT-JANUAR-2020\\RJEŠENJE\\RS1_Ispit\\RS1_Ispit_asp.net_core.csproj",
+  "projectFilePath": "C:\\Users\\Kenan\\Documents\\GitHub\\RS1-ISPITI\\RS1-ISPIT-JANUAR-2020\\RJEŠENJE\\RS1_Ispit\\RS1_Ispit_asp.net_core.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Kenan\\.nuget\\packages\\libuv\\1.10.0\\libuv.1.10.0.nupkg.sha512",
     "C:\\Users\\Kenan\\.nuget\\packages\\messagepack\\1.7.3.7\\messagepack.1.7.3.7.nupkg.sha512",
